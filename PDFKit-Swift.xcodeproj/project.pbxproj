@@ -10,9 +10,9 @@
 		51543D222A97C22100CB5EF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51543D212A97C22100CB5EF1 /* AppDelegate.swift */; };
 		51543D242A97C22100CB5EF1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51543D232A97C22100CB5EF1 /* SceneDelegate.swift */; };
 		51543D262A97C22100CB5EF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51543D252A97C22100CB5EF1 /* ViewController.swift */; };
-		51543D292A97C22100CB5EF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51543D272A97C22100CB5EF1 /* Main.storyboard */; };
 		51543D2B2A97C22200CB5EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51543D2A2A97C22200CB5EF1 /* Assets.xcassets */; };
 		51543D2E2A97C22200CB5EF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51543D2C2A97C22200CB5EF1 /* LaunchScreen.storyboard */; };
+		51543D362A97C37C00CB5EF1 /* MM_Latest.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 51543D352A97C37C00CB5EF1 /* MM_Latest.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +20,10 @@
 		51543D212A97C22100CB5EF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		51543D232A97C22100CB5EF1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		51543D252A97C22100CB5EF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		51543D282A97C22100CB5EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51543D2A2A97C22200CB5EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51543D2D2A97C22200CB5EF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51543D2F2A97C22200CB5EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51543D352A97C37C00CB5EF1 /* MM_Latest.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MM_Latest.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +56,10 @@
 		51543D202A97C22100CB5EF1 /* PDFKit-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				51543D352A97C37C00CB5EF1 /* MM_Latest.pdf */,
 				51543D212A97C22100CB5EF1 /* AppDelegate.swift */,
 				51543D232A97C22100CB5EF1 /* SceneDelegate.swift */,
 				51543D252A97C22100CB5EF1 /* ViewController.swift */,
-				51543D272A97C22100CB5EF1 /* Main.storyboard */,
 				51543D2A2A97C22200CB5EF1 /* Assets.xcassets */,
 				51543D2C2A97C22200CB5EF1 /* LaunchScreen.storyboard */,
 				51543D2F2A97C22200CB5EF1 /* Info.plist */,
@@ -125,9 +125,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51543D362A97C37C00CB5EF1 /* MM_Latest.pdf in Resources */,
 				51543D2E2A97C22200CB5EF1 /* LaunchScreen.storyboard in Resources */,
 				51543D2B2A97C22200CB5EF1 /* Assets.xcassets in Resources */,
-				51543D292A97C22100CB5EF1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,14 +147,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		51543D272A97C22100CB5EF1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51543D282A97C22100CB5EF1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		51543D2C2A97C22200CB5EF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +284,6 @@
 				INFOPLIST_FILE = "PDFKit-Swift/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +311,6 @@
 				INFOPLIST_FILE = "PDFKit-Swift/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
