@@ -16,8 +16,7 @@ class ViewController: UIViewController, UIDocumentPickerDelegate, UINavigationCo
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        view.backgroundColor = .systemBackground
+        // Do any additional setup after loading the view
 
         let picker = UIBarButtonItem(title: "Select", style: .plain, target: self, action: #selector(openDocumentPicker))
         navigationItem.rightBarButtonItem = picker
@@ -27,24 +26,11 @@ class ViewController: UIViewController, UIDocumentPickerDelegate, UINavigationCo
         view.addSubview(pdfView)
         pdfView.frame = view.bounds
 
-        loadPDF()
-
     }
 
-    // in an actual scenario we could fetch from device/network whatever
-    func loadPDF(){
-        guard let path = Bundle.main.path(forResource: "MM_Latest", ofType: "pdf") else {return}
-
-        let url:URL
-
-        if #available(iOS 16.0, *) {
-            url = URL(filePath: path)
-        } else {
-            // Fallback on earlier versions
-            url = URL(fileURLWithPath: path)
-        }
-
-        guard let pdfDocument = PDFDocument(url: url) else {return}
+    // load the pdf from url
+    func loadPDF(_ url: URL){
+        let pdfDocument = PDFDocument(url: url)
         pdfView.document = pdfDocument
         pdfView.autoScales = true
     }
@@ -55,7 +41,7 @@ class ViewController: UIViewController, UIDocumentPickerDelegate, UINavigationCo
 
         if #available(iOS 14.0, *){
             let docTypes = UTType.types(tag: "pdf", tagClass: UTTagClass.filenameExtension, conformingTo: nil)
-            docPicker = UIDocumentPickerViewController(forOpeningContentTypes: docTypes)
+            docPicker = UIDocumentPickerViewController(forOpeningContentTypes: docTypes, asCopy: true)
         } else {
             docPicker = UIDocumentPickerViewController(documentTypes: [pdfType], in: .import)
         }
@@ -63,6 +49,11 @@ class ViewController: UIViewController, UIDocumentPickerDelegate, UINavigationCo
         docPicker.delegate = self
         present(docPicker, animated: true)
 
+    }
+
+    func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentsAt urls: [URL]) {
+        guard let url = urls.first else {return}
+        loadPDF(url)
     }
 }
 
