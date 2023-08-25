@@ -33,6 +33,10 @@ class ViewController: UIViewController, UIDocumentPickerDelegate, UINavigationCo
         let pdfDocument = PDFDocument(url: url)
         pdfView.document = pdfDocument
         pdfView.autoScales = true
+        pdfView.displayDirection = .horizontal
+        pdfView.displayMode = .twoUp
+        // tons of other methods to implement
+//    https://developer.apple.com/documentation/pdfkit
     }
 
     @objc func openDocumentPicker(){
